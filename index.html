@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="mr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+    <meta name="description" content="शिवप्रसाद मंगल कार्यालय — हेडावे रोड, गणपती नगर. विवाह सोहळा, भोजन व्यवस्था, १२ रूम्स आणि प्रशस्त पार्किंग." />
+    <title>शिवप्रसाद मंगल कार्यालय | तुमच्या आनंदाचा सोहळा</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet" />
+    <script>window.tailwind = window.tailwind || {}; window.tailwind.config = { theme: { extend: { colors: { maroon: "#800020", weddingGold: "#D4AF37", ivory: "#FAF7F2" } } } };</script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="styles.css?v=photo-manager-3" />
+  </head>
+  <body>
+    <div class="announcement" id="announcement" hidden></div>
+    <header class="site-header" id="top">
+      <a class="brand" href="#home" aria-label="शिवप्रसाद मंगल कार्यालय मुख्यपृष्ठ">
+        <span class="brand-logo-wrap"><img class="brand-logo" data-photo-key="logo" src="logo.png" alt="शिवप्रसाद मंगल कार्यालयाचा सुवर्ण राजमुद्रा लोगो" /></span>
+        <span class="brand-name">शिवप्रसाद <span>मंगल कार्यालय</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="मेन्यू उघडा" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="मुख्य नेव्हिगेशन">
+        <a href="#home">मुख्यपृष्ठ</a><a href="#spaces">दालन व हॉल</a><a href="#rooms">१२ रूम्स</a>
+        <a href="#dining">जेवण कक्ष</a><a href="#gallery">गॅलरी</a><a href="#contact">संपर्क</a>
+      </nav>
+      <div class="header-actions">
+        <button class="audio-toggle" id="audioToggle" aria-label="शहनाई संगीत सुरू करा" title="शहनाई संगीत सुरू करा"><span>♫</span></button>
+        <button class="audio-mute" id="audioMute" aria-label="संगीत म्यूट करा" title="संगीत म्यूट करा">◖</button>
+        <a class="button button-small button-gold" id="headerWhatsappLink" href="https://wa.me/919503007852?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%2C%20%E0%A4%AC%E0%A5%81%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A5%80%20%E0%A4%9A%E0%A5%8C%E0%A4%95%E0%A4%B6%E0%A5%80%20%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%9A%E0%A5%80%20%E0%A4%86%E0%A4%B9%E0%A5%87." target="_blank" rel="noopener">बुकिंग चौकशी <span aria-hidden="true">↗</span></a>
+      </div>
+      <audio id="backgroundAudio" loop></audio>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img class="hero-image" data-photo-key="hero" src="exterior.jpg" data-fallback="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2200&q=88" alt="शिवप्रसाद मंगल कार्यालयाचा बाहेरील परिसर" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <span class="eyebrow"><span class="eyebrow-line"></span> आनंदाच्या प्रत्येक क्षणासाठी</span>
+          <h1 id="heroTitle">शिवप्रसाद मंगल कार्यालय<br /><em>भव्य व अविस्मरणीय लग्न सोहळ्यांचे दालन</em></h1>
+          <p>परंपरेचा साज, आपुलकीची साथ — तुमच्या खास दिवसासाठी एक सुंदर जागा.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="https://wa.me/919503007852?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%2C%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B2%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%80%E0%A4%B2%20%E0%A4%AC%E0%A5%81%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A5%80%20%E0%A4%9A%E0%A5%8C%E0%A4%95%E0%A4%B6%E0%A5%80%20%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%9A%E0%A5%80%20%E0%A4%86%E0%A4%B9%E0%A5%87." id="heroWhatsappLink" target="_blank" rel="noopener">WhatsApp चौकशी <span aria-hidden="true">↗</span></a>
+            <a class="hero-link hero-call" data-phone-index="0" href="tel:+919503007852">📞 कॉल करा <span>9503007852</span></a>
+            <a class="hero-link hero-secondary-call hero-call" data-phone-index="1" href="tel:+919422233236"><span>9422233236</span></a>
+            <a class="hero-link hero-tertiary-call hero-call" data-phone-index="2" href="tel:+919130070011"><span>9130070011</span></a>
+          </div>
+        </div>
+        <div class="hero-note"><span class="note-icon">✳</span><span>तुमचा सोहळा,<br /><strong>आमची जबाबदारी</strong></span></div>
+        <div class="hero-bottom"><span>शिवप्रसाद मंगल कार्यालय हेडावे रोड</span><span class="hero-scroll">खाली स्क्रोल करा <span>↓</span></span><span>01 — 06</span></div>
+      </section>
+
+      <section class="intro section-wrap" id="about">
+        <div class="intro-kicker reveal"><span class="section-number">01 / परिचय</span><span class="gold-rule"></span></div>
+        <div class="intro-copy reveal">
+          <h2>आठवणींच्या <em>सुरुवातीला</em>,<br />आम्ही तुमच्या सोबत.</h2>
+          <p>आयुष्यातला प्रत्येक मंगल क्षण खास असतो. शिवप्रसाद मंगल कार्यालयात प्रशस्त हॉल, आपुलकीची सेवा आणि सोयीस्कर सुविधा — तुमच्या आनंदाच्या सोहळ्यासाठी सगळं एकाच छताखाली.</p>
+          <a class="text-link" href="#spaces">आमच्या जागा पाहा <span>↗</span></a>
+        </div>
+        <div class="intro-image reveal"><img data-photo-key="intro" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=85" alt="स्नेहपूर्ण विवाह सोहळ्याची सजावट" loading="lazy" /><div class="image-caption">प्रत्येक सोहळा मनापासून खास.</div></div>
+      </section>
+
+      <section class="spaces section-wrap" id="spaces">
+        <div class="section-heading reveal"><div><span class="section-number">02 / आमच्या जागा</span><h2>तुमच्या सोहळ्याला<br /><em>योग्य असा अवकाश.</em></h2></div><p>लहान कौटुंबिक कार्यक्रम असो वा मोठा विवाहसोहळा — प्रत्येक क्षणासाठी विचारपूर्वक आखलेल्या जागा.</p></div>
+        <div class="space-grid">
+          <article class="space-card space-main reveal"><img data-photo-key="hall" src="hall_main.jpg" data-fallback="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1400&q=85" alt="मध्यभागी आसन व्यवस्था असलेला भव्य विवाह हॉल आणि स्टेज" loading="lazy" /><div class="space-overlay"></div><div class="space-content"><span>01 — मुख्य सभागृह</span><h3>भव्य लग्न<br />सोहळा हॉल</h3><a href="#contact" aria-label="मुख्य सभागृहासाठी चौकशी करा">↗</a></div></article>
+          <article class="space-card space-dining reveal" id="dining"><img data-photo-key="dining" src="dining.jpg" data-fallback="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=85" alt="रुंद आणि व्यवस्थित आसनव्यवस्था असलेला भोजन कक्ष" loading="lazy" /><div class="space-overlay"></div><div class="space-content"><span>02 — भोजन व्यवस्था</span><h3>सुसज्ज<br />भोजन कक्ष</h3><a href="#contact" aria-label="भोजन कक्षासाठी चौकशी करा">↗</a></div></article>
+          <article class="space-card space-stay reveal"><img data-photo-key="rooms-card" src="room_featured.jpg" data-fallback="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85" alt="पांढऱ्या चादरीसह प्रशस्त अतिथी रूम" loading="lazy" /><div class="space-overlay"></div><div class="space-content"><span>03 — अतिथी निवास</span><h3>१२ प्रशस्त<br />रूम्स</h3><a href="#rooms" aria-label="रूम्सबद्दल अधिक माहिती">↗</a></div></article>
+        </div>
+      </section>
+
+      <section class="rooms" id="rooms">
+        <div class="rooms-photo"><img data-photo-key="rooms-featured" src="room_featured.jpg" data-fallback="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=88" alt="मोठी आणि आरामदायी अतिथी खोली" loading="lazy" /></div>
+        <div class="rooms-content reveal"><span class="section-number">03 / तुमच्या पाहुण्यांसाठी</span><h2>१२ रूम्स.<br /><em>भरपूर आराम.</em></h2><p>सोहळ्याच्या धावपळीतही आपल्या माणसांना मिळावा निवांतपणा. स्वच्छ, प्रशस्त आणि सोयींनी सज्ज खोल्या.</p>
+          <ul class="room-features"><li><span>✳</span> अटॅच्ड बाथरूम</li><li><span>✳</span> स्वच्छ आणि मोठी जागा</li><li><span>✳</span> कपाट आणि आरसा</li></ul>
+          <a class="button button-outline" href="#contact">उपलब्धता विचारा <span>↗</span></a>
+        </div>
+        <div class="room-count"><strong>१२</strong><span>डिलक्स<br />रूम्स</span></div>
+      </section>
+
+      <section class="amenities section-wrap" id="amenities">
+        <div class="section-heading reveal"><div><span class="section-number">04 / सुविधा</span><h2>सोयी प्रत्येक,<br /><em>काळजी मनापासून.</em></h2></div><p>तुमचा कार्यक्रम सुरळीत आणि आनंदात पार पडावा म्हणून प्रत्येक छोट्या-मोठ्या गोष्टीची काळजी.</p></div>
+        <div class="amenity-grid">
+          <article class="amenity-card reveal"><span class="amenity-icon">⌂</span><span class="amenity-index">01</span><h3>भव्य लग्न सोहळा हॉल</h3><p>तुमच्या आनंदसोहळ्यासाठी प्रशस्त सभागृह.</p></article>
+          <article class="amenity-card reveal"><span class="amenity-icon">♨</span><span class="amenity-index">02</span><h3>स्वतंत्र भोजन कक्ष</h3><p>पाहुण्यांसाठी सुटसुटीत भोजन व्यवस्था.</p></article>
+          <article class="amenity-card reveal"><span class="amenity-icon">▤</span><span class="amenity-index">03</span><h3>१२ प्रशस्त रूम्स</h3><p>AC / Non-AC पर्यायांसह अतिथी निवास.</p></article>
+          <article class="amenity-card reveal"><span class="amenity-icon">♧</span><span class="amenity-index">04</span><h3>विस्तीर्ण सुरक्षित पार्किंग</h3><p>चारचाकी आणि दुचाकी वाहनांसाठी समर्पित पार्किंग जागा.</p></article>
+          <article class="amenity-card reveal"><span class="amenity-icon">⌑</span><span class="amenity-index">05</span><h3>व्यावसायिक दुकाने</h3><p>व्यावसायिक जागेची उपलब्धता.</p></article>
+          <article class="amenity-card reveal"><span class="amenity-icon">✳</span><span class="amenity-index">06</span><h3>वीज आणि पाणी</h3><p>२४ तास वीज व पाण्याची व्यवस्था.</p></article>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="gallery-top section-wrap"><div class="section-heading reveal"><div><span class="section-number">05 / फोटो व व्हिडिओ</span><h2>आठवणींच्या <em>गॅलरीत.</em></h2></div><p>आमच्या जागेची एक झलक — आणि तुमच्या पुढच्या आठवणींची सुरुवात.</p></div>
+          <div class="gallery-filters" role="tablist" aria-label="गॅलरी श्रेणी"><button class="filter-button active" data-filter="all">सर्व</button><button class="filter-button" data-filter="stage">लग्न हॉल व स्टेज</button><button class="filter-button" data-filter="dining">जेवण कक्ष</button><button class="filter-button" data-filter="rooms">१२ रूम्स</button><button class="filter-button" data-filter="parking">परिसर व पार्किंग</button><button class="filter-button" data-filter="other">इतर</button><button class="filter-button" data-filter="videos">व्हिडिओ क्लिप्स</button></div>
+        </div>
+        <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="contact section-wrap" id="contact">
+        <div class="contact-copy reveal"><span class="section-number">06 / चला, बोलूया</span><h2>तुमच्या खास<br /><em>दिवसाची सुरुवात.</em></h2><p>तारीख, उपलब्धता किंवा कार्यालयाविषयी अधिक जाणून घेण्यासाठी आजच संपर्क साधा.</p>
+          <div class="contact-details"><div class="contact-detail"><span class="contact-symbol">⌖</span><div><small>आमचा पत्ता</small><p>शिवप्रसाद मंगल कार्यालय,<br /><span id="addressText">हेडावे रोड,गणपती नगर जवळ</span></p></div></div>
+            <div class="contact-detail"><span class="contact-symbol">◷</span><div><small>फोन / WhatsApp</small><div class="phone-list" id="contactPhone"></div></div></div>
+            <div class="contact-detail"><span class="contact-symbol">✉</span><div><small>ईमेल</small><p><a id="emailLink" href="mailto:pavankumbhar425@gmail.com">pavankumbhar425@gmail.com</a></p></div></div></div>
+          <div class="contact-actions"><a class="button button-gold" href="https://wa.me/919503007852?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%2C%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B2%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%80%E0%A4%B2%20%E0%A4%AC%E0%A5%81%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%E0%A5%80%20%E0%A4%9A%E0%A5%8C%E0%A4%95%E0%A4%B6%E0%A5%80%20%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%9A%E0%A5%80%20%E0%A4%86%E0%A4%B9%E0%A5%87." id="whatsappLink" target="_blank" rel="noopener">WhatsApp वर चौकशी <span>↗</span></a><a class="phone-link" href="tel:+919503007852" id="callLink">आता कॉल करा <span>↗</span></a></div>
+        </div>
+        <div class="contact-side reveal"><div class="map-card"><iframe title="शिवप्रसाद मंगल कार्यालयाजवळील नकाशा" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Hedawe%20Road%20Near%20Ganpati%20Nagar&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe><a class="map-link" href="https://maps.app.goo.gl/Ra3bYvoHeX8Nd3wo9" target="_blank" rel="noopener" aria-label="Google Maps मध्ये कार्यालयाचा पत्ता उघडा"><span>नकाशावर दिशा पहा ↗</span></a><div class="map-label"><span>⌖</span><div><strong>आम्हाला भेट द्या</strong><small>हेडावे रोड, गणपती नगर जवळ शिवप्रसाद मंगल कार्यालयाजवळ </small></div></div></div>
+          <form class="inquiry-form" id="inquiryForm"><h3>बुकिंग चौकशी</h3><label for="guestName">तुमचे नाव</label><input id="guestName" name="name" required placeholder="उदा. आपले शुभनाव " /><label for="guestEmail">ईमेल पत्ता</label><input id="guestEmail" name="email" type="email" required placeholder="name@example.com" /><label for="guestMessage">तुमचा संदेश</label><textarea id="guestMessage" name="message" rows="3" required placeholder="तारीख आणि कार्यक्रमाबद्दल सांगा..."></textarea><div class="inquiry-actions"><button class="button button-dark" type="submit">ईमेल पाठवा <span>↗</span></button><button class="button button-whatsapp" id="whatsappFormButton" type="button">WhatsApp <span>↗</span></button></div><p class="form-note" id="formNote">ईमेलसाठी तुमचे ईमेल अ‍ॅप उघडेल.</p></form>
+        </div>
+      </section>
+      <section class="closing-banner"><span>✳</span><p>शुभकार्याची सुरुवात,<br /><em>शिवप्रसादच्या साथीनं.</em></p><a class="button button-outline-light" href="#contact">बुकिंग चौकशी <span>↗</span></a></section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-logo-wrap"><img class="brand-logo" data-photo-key="logo" src="logo.png" alt="शिवप्रसाद मंगल कार्यालयाचा सुवर्ण राजमुद्रा लोगो" /></span><span class="brand-name">शिवप्रसाद <span>मंगल कार्यालय</span></span></a><p>तुमच्या आनंदसोहळ्यांचा विश्वासू साथीदार.</p><div class="footer-bottom"><span>© <span id="year"></span> शिवप्रसाद मंगल कार्यालय</span><span>हेडावे रोड · गणपती नगर</span><span>Copyright © Shivprasad Mangal Karyalay | Designed &amp; Developed by Ashutosh Patil</span><button class="admin-trigger fixed bottom-4 right-4 z-50 px-4 py-3 rounded-full shadow-lg" id="adminTrigger" aria-label="Admin edit mode सुरू करा" title="Admin / Edit Mode">✎ Admin / Edit Mode</button></div></footer>
+
+    <dialog class="lightbox" id="lightbox"><button class="dialog-close" data-close="lightbox" aria-label="बंद करा">×</button><div class="lightbox-content" id="lightboxContent"></div><p id="lightboxCaption"></p></dialog>
+    <dialog class="admin-auth-dialog" id="adminAuthDialog"><div class="admin-header"><div><span class="section-number">मालक प्रवेश</span><h2>Admin / Edit Mode</h2></div><button class="dialog-close" data-close="adminAuthDialog" aria-label="बंद करा">×</button></div><p class="admin-notice">व्यवस्थापन उघडण्यासाठी पासवर्ड टाका. हा static website मधील client-side lock आहे; खऱ्या सुरक्षिततेसाठी server-side authentication आवश्यक आहे.</p><form id="authForm" class="auth-form"><label for="adminPassword">Admin Password</label><input id="adminPassword" name="password" type="password" required autocomplete="current-password" /><p id="authError" class="auth-error" role="alert"></p><button class="button button-dark" id="authSubmit" type="submit">Edit Mode सुरू करा</button></form></dialog>
+    <dialog class="admin-dialog" id="adminDialog"><div class="admin-header"><div><span class="section-number">व्यवस्थापन</span><h2>सामग्री संपादित करा</h2></div><button class="dialog-close" data-close="adminDialog" aria-label="बंद करा">×</button></div>
+      <p class="admin-notice">Edit Mode मध्ये कोणत्याही फोटोवरील 📷 बदला बटण वापरा. बदल सर्व उपकरणांवर Firebase द्वारे सिंक होतात; फोटो संकुचित करून क्लाउडवर साठवले जातात.</p>
+      <button class="edit-mode-switch" id="editModeSwitch" type="button" aria-pressed="true">Edit Mode: ON — बंद करा</button>
+      <div class="admin-tabs"><button class="admin-tab active" data-panel="settingsPanel">माहिती व सेटिंग्ज</button><button class="admin-tab" data-panel="mediaPanel">गॅलरी व्यवस्थापन</button></div>
+      <section class="admin-panel active" id="settingsPanel"><form id="settingsForm" class="admin-form"><label>मुख्य शीर्षक<textarea name="title" rows="2"></textarea></label><label>घोषणा बॅनर<textarea name="announcement" rows="2" placeholder="रिकामे ठेवल्यास बॅनर दिसणार नाही"></textarea></label><label>पत्ता<input name="address" /></label><label>फोन नंबर १<input name="phone" type="tel" /></label><label>फोन नंबर २<input name="phone2" type="tel" /></label><label>फोन नंबर ३<input name="phone3" type="tel" /></label><label>चौकशी ईमेल<input name="email" type="email" /></label><label>पार्श्वसंगीत URL<input name="music" type="url" placeholder="https://... (MP3/OGG URL)" /></label><label>किंवा ऑडिओ फाइल (कमाल १ MB)<input name="musicFile" type="file" accept="audio/mpeg,audio/mp3,audio/ogg,audio/wav,audio/aac,audio/mp4" /></label><label class="admin-checkbox"><input name="clearMusic" type="checkbox" /> पार्श्वसंगीत काढा</label><button class="button button-dark" type="submit">सेटिंग्ज सेव्ह करा</button></form></section>
+      <section class="admin-panel" id="mediaPanel"><form id="mediaForm" class="admin-form"><input name="mediaId" type="hidden" /><label>मीडिया प्रकार<select name="type"><option value="image">फोटो</option><option value="video">व्हिडिओ</option></select></label><label>मीडिया URL<input name="url" type="url" placeholder="https://..." /></label><label>किंवा फाइल अपलोड करा<input name="file" type="file" accept="image/*,video/mp4,video/webm" /></label><label>वर्णन<input name="alt" required placeholder="फोटोचे वर्णन" /></label><label>श्रेणी<select name="category"><option value="stage">हॉल / स्टेज</option><option value="dining">जेवण कक्ष</option><option value="rooms">१२ रूम्स</option><option value="parking">परिसर / पार्किंग</option><option value="other">इतर</option></select></label><button class="button button-dark" type="submit">गॅलरीत जोडा</button></form><p class="form-note">फोन/कंप्युटरवरील फोटो थेट अपलोड करा किंवा मोठ्या व्हिडिओसाठी HTTPS URL द्या.</p><div class="admin-media-list" id="adminMediaList"></div></section>
+      <div class="admin-footer"><button id="resetData" class="reset-button">मूळ सामग्री पूर्ववत करा</button><span id="adminStatus" role="status"></span></div>
+    </dialog>
+    <input id="photoFilePicker" type="file" accept="image/*" hidden />
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
